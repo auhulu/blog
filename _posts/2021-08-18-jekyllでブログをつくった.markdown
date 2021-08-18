@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "jekyllでブログをつくった"
+date:   2021-08-18 21:07:22 +0900
+---
+
+メモ代わりに使えるブログ的なものを探していてjekyllとgithub pagesの構成がよさげだったので試してみた．  
+想定している使い方としてはほぼテキストのみ，ソースコードは張るかも，画像はなしでもおｋ的な感じ．以前はgoogleのbloggerを使用していた．  
+
+# 作業録的なの
+`$ gem install jekyll bundler`  
+`$ gem jekyll new プロジェクト名`  
+以下でローカル環境で確認のはずがエラー  
+`$ gem bundle exec jekyll serve`  
+Ruby 3.0でローカルの作業を行う際はgemfileにwebrickを追加する必要があるみたい．  
+`$ bundle add webrick`  
+[参考](https://github.com/jekyll/jekyll/issues/8523)  
+
+あとは適当にgituhubにブランチ作ってpushしてpagesでブランチを設定してやるだけ．  
+広告が一切ないこと，markdownファイルで統一的に管理できること，なによりgitで管理できるというのが良い．画像を入れるとなるとちょいちょいストレスにはなりそう．  
+デザインはデフォルトのものなので弄るなり，別のを拾ってくるなりは気が向けばという感じ．
+
+色々思うところあり，githubのアカウントを変えたのだがgit pushでエラーがあった．どうやらGitHubで2021年8月13日にパスワード認証が廃止されたそう．
+[参考](https://gigazine.net/news/20201219-github-token-git-operations/)
